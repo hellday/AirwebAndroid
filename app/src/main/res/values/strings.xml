@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Paris Saint Germain</string>
+
+    <string name="picture_name">News Picture</string>
+    <string name="contact_title">À propos</string>
+
+    <string name="contact_name">Airweb - Facilitateur de mobilité</string>
+    <string name="contact_address">1 Rue Royale, Bureaux de Colline, 92210 Saint Cloud</string>
+    <string name="contact_mail">contact@airweb.fr</string>
+    <string name="contact_phone">+33 1 76 61 65 10</string>
+
+    <string name="title_activity_settings">À propos</string>
+    <string name="title_filter">Filtres</string>
+
+    <string name="search">Rechercher</string>
+    <string name="filtrer">Filtrer</string>
+
+    // Spinner
+    <string-array name="type">
+        <item>Tout</item>
+        <item>Hot</item>
+        <item>News</item>
+        <item>Actualité</item>
+    </string-array>
+
+    <string-array name="filterby">
+        <item>Titre</item>
+        <item>Date</item>
+    </string-array>
+</resources>
