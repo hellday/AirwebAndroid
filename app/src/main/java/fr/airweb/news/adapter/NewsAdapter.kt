@@ -16,7 +16,6 @@ import java.text.SimpleDateFormat
 
 
 class NewsAdapter(private val news: MutableList<News>) : RecyclerView.Adapter<NewsViewHolder>(), Filterable {
-    //private var news: MutableList<NewsList.News> = mutableListOf()
     private var newsFiltered: MutableList<News> = news
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
@@ -39,7 +38,7 @@ class NewsAdapter(private val news: MutableList<News>) : RecyclerView.Adapter<Ne
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val key = constraint.toString()
 
-                if(key.isEmpty()){
+                if(key.isEmpty() || key.equals("Tout", ignoreCase = true)){
                     newsFiltered = news
                 }else {
                     val listFiltered: MutableList<News> = mutableListOf()
@@ -47,7 +46,7 @@ class NewsAdapter(private val news: MutableList<News>) : RecyclerView.Adapter<Ne
                         if(row.title.contains(key, true)){
                             listFiltered.add(row)
                         }else if(row.type.contains(key, true)){
-                            listFiltered.add(row)
+                                listFiltered.add(row)
                         }
                     }
                     newsFiltered = listFiltered
